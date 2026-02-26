@@ -365,113 +365,127 @@
         }
     </style>
 
-    <section id="overview" class="py-32 bg-slate-950 text-white relative overflow-hidden">
-        <div
-            class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none">
-        </div>
-        <div
-            class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none">
-        </div>
+<section id="overview" class="py-32 bg-slate-950 text-white relative overflow-hidden">
+  <div
+      class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none">
+  </div>
+  <div
+      class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none">
+  </div>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-24 reveal">
-                <h2 class="text-cyan-400 font-black text-xs uppercase tracking-[0.5em] mb-4">Architecture</h2>
-                <h3 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none">
-                    System <br>
-                    <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-300">Intelligence.</span>
-                </h3>
-            </div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-24 reveal">
+          <h2 class="text-cyan-400 font-black text-xs uppercase tracking-[0.5em] mb-4">Architecture</h2>
+          <h3 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none">
+              System <br>
+              <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-300">Intelligence.</span>
+          </h3>
+      </div>
 
-            <div class="grid lg:grid-cols-12 gap-16 items-start perspective-container">
-                <div class="lg:col-span-7 reveal">
-                    <div class="video-reel-3d video-reel-container rounded-[3rem] border border-white/10 overflow-hidden">
-                        <button id="global-mute-btn" class="mute-btn z-50">
-                            <svg id="mute-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636" />
-                            </svg>
-                        </button>
+      <div class="grid lg:grid-cols-12 gap-16 items-start perspective-container">
+          <div class="lg:col-span-7 reveal">
+              <div class="video-reel-3d video-reel-container rounded-[3rem] border border-white/10 overflow-hidden">
+                  <button id="global-mute-btn" class="mute-btn z-50">
+                      <svg id="mute-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636" />
+                      </svg>
+                  </button>
 
-                        <div class="swiper vertical-video-swiper h-full">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="video-card">
-                                        <video class="reel-video" loop muted playsinline autoplay>
+                  <div class="swiper vertical-video-swiper h-full">
+                      <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                              <div class="video-card">
+                                  <!-- UPDATED: video embed (renders reliably) -->
+                                  <iframe
+                                      class="reel-video"
+                                      src="https://drive.google.com/file/d/1ggTin8i7SIa3pOWOeXx9FjSJlxKysw3M/preview"
+                                      allow="autoplay"
+                                      allowfullscreen
+                                      frameborder="0">
+                                  </iframe>
 
-                                        </video>
-                                        <div class="video-content-overlay">
-                                            <div class="flex items-center gap-2 mb-3">
-                                                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                                                <span
-                                                    class="text-[10px] font-black uppercase tracking-widest text-white/70">Live
-                                                    Feed 01</span>
-                                            </div>
-                                            <h4 class="text-3xl font-black uppercase italic tracking-tighter">Operational
-                                                Showcase</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="video-card">
-                                        <video class="reel-video" loop muted playsinline>
+                                  <div class="video-content-overlay">
+                                      <div class="flex items-center gap-2 mb-3">
+                                          <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                                          <span
+                                              class="text-[10px] font-black uppercase tracking-widest text-white/70">Live
+                                              Feed 01</span>
+                                      </div>
+                                      <h4 class="text-3xl font-black uppercase italic tracking-tighter">Operational
+                                          Showcase</h4>
+                                  </div>
+                              </div>
+                          </div>
 
-                                        </video>
-                                        <div class="video-content-overlay">
-                                            <div class="flex items-center gap-2 mb-3">
-                                                <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-                                                <span
-                                                    class="text-[10px] font-black uppercase tracking-widest text-white/70">Telemetry
-                                                    Data</span>
-                                            </div>
-                                            <h4 class="text-3xl font-black uppercase italic tracking-tighter">IoT Telemetry
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                    <p class="text-center text-blue-500/50 text-[10px] font-black uppercase mt-8 tracking-[0.4em]">
-                        Swipe Vertically to Switch Stream
-                    </p>
-                </div>
+                          <div class="swiper-slide">
+                              <div class="video-card">
+                                  <!-- UPDATED: video embed (renders reliably) -->
+                                  <iframe
+                                      class="reel-video"
+                                      src="https://drive.google.com/file/d/1qTxD23KOUYNbJHu2AMVRdnAgxQp4q6QA/preview"
+                                      allow="autoplay"
+                                      allowfullscreen
+                                      frameborder="0">
+                                  </iframe>
 
-                <div class="lg:col-span-5 reveal" style="transition-delay: 0.2s">
-                    <div class="details-scroll-area space-y-8">
+                                  <div class="video-content-overlay">
+                                      <div class="flex items-center gap-2 mb-3">
+                                          <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+                                          <span
+                                              class="text-[10px] font-black uppercase tracking-widest text-white/70">Telemetry
+                                              Data</span>
+                                      </div>
+                                      <h4 class="text-3xl font-black uppercase italic tracking-tighter">IoT Telemetry
+                                      </h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                  </div>
+              </div>
 
-                        <div class="glow-card p-10 rounded-[2.5rem] group border-l-4 border-l-blue-600">
-                            <div
-                                class="floating-icon w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center text-white mb-6">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <h4 class="text-xl font-black uppercase italic mb-3">Real-Time Monitoring</h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">Our sensors provide millisecond-precision
-                                data, ensuring every drop is accounted for on your dashboard.</p>
-                        </div>
+              <p class="text-center text-blue-500/50 text-[10px] font-black uppercase mt-8 tracking-[0.4em]">
+                  Swipe Vertically to Switch Stream
+              </p>
+          </div>
 
-                        <div class="glow-card p-10 rounded-[2.5rem] group border-l-4 border-l-cyan-400">
-                            <div
-                                class="floating-icon w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-400 rounded-2xl flex items-center justify-center text-white mb-6">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                </svg>
-                            </div>
-                            <h4 class="text-xl font-black uppercase italic mb-3">Scalable Infrastructure</h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">From single households to city-wide networks,
-                                Alexa's system scales without performance drops.</p>
-                        </div>
+          <div class="lg:col-span-5 reveal" style="transition-delay: 0.2s">
+              <div class="details-scroll-area space-y-8">
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                  <div class="glow-card p-10 rounded-[2.5rem] group border-l-4 border-l-blue-600">
+                      <div
+                          class="floating-icon w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center text-white mb-6">
+                          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                      </div>
+                      <h4 class="text-xl font-black uppercase italic mb-3">Real-Time Monitoring</h4>
+                      <p class="text-slate-400 text-sm leading-relaxed">Our sensors provide millisecond-precision
+                          data, ensuring every drop is accounted for on your dashboard.</p>
+                  </div>
+
+                  <div class="glow-card p-10 rounded-[2.5rem] group border-l-4 border-l-cyan-400">
+                      <div
+                          class="floating-icon w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-400 rounded-2xl flex items-center justify-center text-white mb-6">
+                          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                          </svg>
+                      </div>
+                      <h4 class="text-xl font-black uppercase italic mb-3">Scalable Infrastructure</h4>
+                      <p class="text-slate-400 text-sm leading-relaxed">From single households to city-wide networks,
+                          Alexa's system scales without performance drops.</p>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 
     <style>
         :root {
